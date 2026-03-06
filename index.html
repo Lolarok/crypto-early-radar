@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CryptoEarlyRadar | MoltStreet</title>
+<style>
+:root{--bg:#0d0f14;--card:#161b24;--bd:#22293a;--ac:#00d4ff;--gr:#00ff88;--rd:#ff4466;--tx:#e2e8f0;--mu:#64748b}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--tx);font-family:system-ui,sans-serif}
+header{background:linear-gradient(135deg,#0d0f14,#1a1f2e);border-bottom:1px solid var(--bd);padding:18px 36px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.logo{font-size:1.3rem;font-weight:700;color:var(--ac)}.logo span{color:#fff}
+.sub{font-size:.78rem;color:var(--mu);margin-top:3px}
+.rbtn{background:var(--ac);color:#000;border:none;padding:7px 16px;border-radius:8px;font-weight:700;cursor:pointer;font-size:.8rem}
+.c{max-width:1200px;margin:0 auto;padding:24px 18px}
+.g{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:24px}
+.sc{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:18px;text-align:center}
+.lbl{font-size:.72rem;color:var(--mu);text-transform:uppercase;letter-spacing:.8px}
+.v{font-size:1.7rem;font-weight:700;margin-top:6px}
+.w{background:var(--card);border:1px solid var(--bd);border-radius:10px;overflow:hidden}
+.th{padding:16px 22px;border-bottom:1px solid var(--bd);display:flex;justify-content:space-between;align-items:center}
+table{width:100%;border-collapse:collapse}
+th{background:#1a2035;padding:10px 14px;text-align:left;font-size:.7rem;color:var(--mu);text-transform:uppercase;letter-spacing:.8px}
+td{padding:11px 14px;border-bottom:1px solid var(--bd);font-size:.82rem}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#151c2c}
+.bar{width:60px;height:5px;background:#1e293b;border-radius:3px;overflow:hidden;display:inline-block;vertical-align:middle;margin-left:5px}
+.bf{height:100%;border-radius:3px}
+.ab{display:inline-block;padding:2px 8px;border-radius:20px;font-size:.68rem;font-weight:700}
+.AL{background:rgba(255,68,102,.15);color:#ff4466;border:1px solid rgba(255,68,102,.3)}
+.WA{background:rgba(255,215,0,.1);color:#ffd700;border:1px solid rgba(255,215,0,.25)}
+.ho{background:rgba(100,116,139,.08);color:var(--mu);border:1px solid var(--bd)}
+.p{color:var(--gr)}.n{color:var(--rd)}.fe{color:#ff4466}.ne{color:#ffd700}
+.db{display:flex;flex-wrap:wrap;gap:3px}
+.bi{background:#1e293b;border-radius:4px;padding:2px 6px;font-size:.66rem;color:var(--mu)}
+.bi b{color:var(--ac)}
+footer{text-align:center;padding:22px;color:var(--mu);font-size:.73rem;border-top:1px solid var(--bd);margin-top:20px}
+@media(max-width:700px){.g{grid-template-columns:1fr 1fr}th:nth-child(n+6),td:nth-child(n+6){display:none}}
+</style>
+</head>
+<body>
+<header>
+<div>
+  <div class="logo">Crypto<span>Early</span>Radar</div>
+  <div class="sub">MoltStreet Intelligence — Early Opportunity Screener</div>
+</div>
+<div style="display:flex;gap:10px;align-items:center">
+  <span id="ts" style="font-size:.75rem;color:var(--mu)">Loading...</span>
+  <button class="rbtn" onclick="loadData()">&#8635; Refresh</button>
+</div>
+</header>
+<div class="c">
+<div class="g">
+  <div class="sc"><div class="lbl">Fear &amp; Greed</div><div class="v" id="fgv">-</div><div id="fgl" style="font-size:.78rem;margin-top:3px;color:var(--mu)"></div></div>
+  <div class="sc"><div class="lbl">F&amp;G Trend 7d</div><div class="v" id="fgt">-</div></div>
+  <div class="sc"><div class="lbl">Active Alerts</div><div class="v" id="ac" style="color:#ff4466">-</div></div>
+  <div class="sc"><div class="lbl">Top Pick</div><div class="v" id="tp" style="color:var(--ac)">-</div></div>
+</div>
+<div class="w">
+  <div class="th"><h2 style="font-size:.95rem;font-weight:600">&#128225; Live Opportunity Scores</h2><span id="tt" style="font-size:.73rem;color:var(--mu)"></span></div>
+  <table>
+  <thead><tr><th>#</th><th>Symbol</th><th>Score</th><th>Price</th><th>MCap</th><th>7d%</th><th>From ATH</th><th>Signal</th><th>Score Breakdown</th></tr></thead>
+  <tbody id="tb"></tbody>
+  </table>
+</div>
+</div>
+<footer>CryptoEarlyRadar &middot; MoltStreet Intelligence &middot; Data: CoinGecko + GitHub APIs &middot; Not financial advice</footer>
+<script>
+async function loadData(){
+  document.getElementById('ts').textContent='Loading...';
+  try{
+    const r=await fetch('data.json?t='+Date.now());
+    if(!r.ok)throw 0;
+    render(await r.json());
+  }catch{
+    document.getElementById('ts').textContent='Run screener.py to generate data.json';
+  }
+}
+function render(d){
+  const fg=d.fear_greed||{};
+  const e=document.getElementById('fgv');
+  e.textContent=fg.index||'-';
+  e.className='v '+(fg.index<25?'fe':fg.index<56?'ne':'p');
+  document.getElementById('fgl').textContent=fg.label||'';
+  const t=fg.trend||0;
+  const te=document.getElementById('fgt');
+  te.textContent=(t>=0?'+ ':'- ')+Math.abs(t)+' pts/wk';
+  te.className='v '+(t>0?'p':'n');
+  const ps=d.projects||[];
+  document.getElementById('ac').textContent=ps.filter(p=>p.score>=65).length;
+  document.getElementById('tp').textContent=ps[0]?.symbol||'-';
+  const ts=new Date(d.generated_at).toLocaleString();
+  document.getElementById('ts').textContent='Updated: '+ts;
+  document.getElementById('tt').textContent=ts;
+  const tb=document.getElementById('tb');
+  tb.innerHTML='';
+  ps.forEach((p,i)=>{
+    const sig=p.score>=65?'ALERT':p.score>=50?'WATCH':'hold';
+    const sc=sig==='ALERT'?'AL':sig==='WATCH'?'WA':'ho';
+    const bc=p.score>=65?'#ff4466':p.score>=50?'#ffd700':'#64748b';
+    const bd=Object.entries(p.breakdown||{}).map(([k,v])=>
+      `<div class="bi">${k}:<b>${v}</b></div>`).join('');
+    const pr=p.price>1?'$'+p.price.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2}):'$'+p.price.toFixed(4);
+    tb.innerHTML+=`<tr>
+      <td style="color:var(--mu)">${i+1}</td>
+      <td><strong>${p.symbol}</strong></td>
+      <td><strong>${p.score}</strong><div class="bar"><div class="bf" style="width:${p.score}%;background:${bc}"></div></div></td>
+      <td>${pr}</td>
+      <td>$${(p.mcap_m||0).toFixed(1)}M</td>
+      <td class="${(p.p7d||0)>=0?'p':'n'}">${(p.p7d||0)>=0?'+':''}${(p.p7d||0).toFixed(2)}%</td>
+      <td class="${(p.ath_chg||0)>-50?'ne':'n'}">${(p.ath_chg||0).toFixed(1)}%</td>
+      <td><span class="ab ${sc}">${sig}</span></td>
+      <td><div class="db">${bd}</div></td></tr>`;
+  });
+}
+loadData();
+</script>
+</body>
+</html>
