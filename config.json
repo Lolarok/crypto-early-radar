@@ -1,0 +1,20 @@
+{
+  "threshold": 65,
+  "email_from": "italiamolt5@gmail.com",
+  "email_to": "italiamolt5@gmail.com",
+  "data_file": "data.json",
+  "watchlist": [
+    {"id": "hyperliquid", "github": "hyperliquid-dex/node"},
+    {"id": "ondo-finance", "github": ""},
+    {"id": "pendle", "github": "pendle-finance/pendle-core-v2-public"},
+    {"id": "sui", "github": "MystenLabs/sui"},
+    {"id": "jupiter-exchange-solana", "github": ""},
+    {"id": "kaito", "github": ""},
+    {"id": "grass", "github": ""},
+    {"id": "drift-protocol", "github": "drift-labs/protocol-v2"},
+    {"id": "berachain-bera", "github": "berachain/beacon-kit"},
+    {"id": "ethena", "github": ""},
+    {"id": "virtual-protocol", "github": ""},
+    {"id": "resolv", "github": ""}
+  ]
+}
