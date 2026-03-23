@@ -4,6 +4,52 @@
 Spot high-potential crypto projects early, before the masses.
 Inspired by the Hyperliquid pre-launch methodology.
 
+## 🚀 Come farlo partire (passo-passo)
+
+### Prerequisiti
+- **Python 3.10+**
+- **Git**
+
+### Passo 1: Clona
+```bash
+git clone https://github.com/Lolarok/crypto-early-radar.git
+cd crypto-early-radar
+```
+
+### Passo 2: Configura (opzionale)
+```bash
+# GitHub token per rate limits migliori (opzionale)
+export GITHUB_TOKEN=your_github_pat
+
+# Per email alerts (opzionale)
+export MAIL_APPPASSWORD=your_gmail_app_password
+```
+
+### Passo 3: Esegui lo screener
+```bash
+python3 screener.py
+```
+
+Genera `data.json` per la dashboard.
+
+### Passo 4: Apri la dashboard
+```bash
+# Mac
+open index.html
+# Windows
+start index.html
+# Linux
+xdg-open index.html
+```
+
+### Oppure online
+**🔗 https://lolarok.github.io/crypto-early-radar/**
+
+### Nessuna dipendenza da installare!
+Tutto usa Python stdlib + API gratuite.
+
+---
+
 ## What It Does
 
 screener.py fetches live data and computes a composite score (0-100):
