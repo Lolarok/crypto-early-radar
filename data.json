@@ -1,214 +1,214 @@
 {
-  "generated_at": "2026-04-10T07:13:19.824135+00:00",
+  "generated_at": "2026-04-11T06:45:47.012923+00:00",
   "fear_greed": {
-    "index": 16,
-    "trend": 5,
+    "index": 15,
+    "trend": 3,
     "label": "Extreme Fear"
   },
   "projects": [
     {
       "symbol": "RESOLV",
-      "score": 86.3,
+      "score": 86.6,
       "breakdown": {
         "ath_discount": 25,
         "vol_momentum": 20,
-        "price_7d": 13.7,
-        "fg_contrarian": 12.6,
+        "price_7d": 13.8,
+        "fg_contrarian": 12.8,
         "github": 5.0,
         "mcap_upside": 10
       },
-      "price": 0.04068666,
-      "mcap_m": 15.758519,
-      "p7d": -2.5327913144396446,
-      "ath_chg": -90.02485,
-      "volume": 15821478
+      "price": 0.03848371,
+      "mcap_m": 14.914008,
+      "p7d": -2.3505628823932514,
+      "ath_chg": -90.56882,
+      "volume": 9354531
     },
     {
       "symbol": "KAITO",
-      "score": 82.5,
+      "score": 79.7,
       "breakdown": {
         "ath_discount": 24.0,
-        "vol_momentum": 20,
-        "price_7d": 10.9,
-        "fg_contrarian": 12.6,
+        "vol_momentum": 15.2,
+        "price_7d": 12.8,
+        "fg_contrarian": 12.8,
         "github": 5.0,
         "mcap_upside": 10
       },
-      "price": 0.39254,
-      "mcap_m": 94.698755,
-      "p7d": -8.19438981116126,
-      "ath_chg": -86.3992,
-      "volume": 28100847
-    },
-    {
-      "symbol": "ENA",
-      "score": 69.5,
-      "breakdown": {
-        "ath_discount": 25,
-        "vol_momentum": 13.8,
-        "price_7d": 9.1,
-        "fg_contrarian": 12.6,
-        "github": 5.0,
-        "mcap_upside": 4
-      },
-      "price": 0.096775,
-      "mcap_m": 854.825869,
-      "p7d": 18.157184956953287,
-      "ath_chg": -93.58945,
-      "volume": 147938210
-    },
-    {
-      "symbol": "PENDLE",
-      "score": 68.8,
-      "breakdown": {
-        "ath_discount": 23.9,
-        "vol_momentum": 11.9,
-        "price_7d": 13.3,
-        "fg_contrarian": 12.6,
-        "github": 0.1,
-        "mcap_upside": 7
-      },
-      "price": 1.06,
-      "mcap_m": 176.679234,
-      "p7d": -3.4096928849472645,
-      "ath_chg": -85.87804,
-      "volume": 26265975
+      "price": 0.396655,
+      "mcap_m": 95.719835,
+      "p7d": -4.439176160702874,
+      "ath_chg": -86.25172,
+      "volume": 18203489
     },
     {
       "symbol": "DRIFT",
-      "score": 68.7,
+      "score": 70.6,
       "breakdown": {
         "ath_discount": 25,
         "vol_momentum": 20,
-        "price_7d": 0.9,
-        "fg_contrarian": 12.6,
+        "price_7d": 2.6,
+        "fg_contrarian": 12.8,
         "github": 0.3,
         "mcap_upside": 10
       },
-      "price": 0.02885528,
-      "mcap_m": 17.624832,
-      "p7d": -28.273172003871018,
-      "ath_chg": -98.89828,
-      "volume": 10107608
+      "price": 0.03015431,
+      "mcap_m": 18.4757,
+      "p7d": -24.773337586650293,
+      "ath_chg": -98.83915,
+      "volume": 11362211
+    },
+    {
+      "symbol": "ENA",
+      "score": 70.0,
+      "breakdown": {
+        "ath_discount": 25,
+        "vol_momentum": 14.8,
+        "price_7d": 8.5,
+        "fg_contrarian": 12.8,
+        "github": 5.0,
+        "mcap_upside": 4
+      },
+      "price": 0.093685,
+      "mcap_m": 821.778061,
+      "p7d": 17.036904341452065,
+      "ath_chg": -93.8155,
+      "volume": 151651113
     },
     {
       "symbol": "GRASS",
-      "score": 67.0,
+      "score": 66.3,
       "breakdown": {
         "ath_discount": 25,
-        "vol_momentum": 5.7,
-        "price_7d": 11.7,
-        "fg_contrarian": 12.6,
+        "vol_momentum": 6.4,
+        "price_7d": 10.1,
+        "fg_contrarian": 12.8,
         "github": 5.0,
         "mcap_upside": 7
       },
-      "price": 0.345616,
-      "mcap_m": 194.294879,
-      "p7d": 23.371946119913964,
-      "ath_chg": -91.23863,
-      "volume": 13958000
+      "price": 0.328499,
+      "mcap_m": 185.459249,
+      "p7d": 20.178451311358103,
+      "ath_chg": -91.55155,
+      "volume": 14895878
     },
     {
       "symbol": "ONDO",
-      "score": 63.7,
+      "score": 64.3,
       "breakdown": {
         "ath_discount": 24.5,
-        "vol_momentum": 4.4,
-        "price_7d": 13.2,
-        "fg_contrarian": 12.6,
-        "github": 5.0,
-        "mcap_upside": 4
-      },
-      "price": 0.253579,
-      "mcap_m": 1234.14029,
-      "p7d": -3.5819427657427636,
-      "ath_chg": -88.15136,
-      "volume": 67888348
-    },
-    {
-      "symbol": "JUP",
-      "score": 63.7,
-      "breakdown": {
-        "ath_discount": 25,
-        "vol_momentum": 3.0,
+        "vol_momentum": 3.9,
         "price_7d": 14.1,
-        "fg_contrarian": 12.6,
+        "fg_contrarian": 12.8,
         "github": 5.0,
         "mcap_upside": 4
       },
-      "price": 0.15982,
-      "mcap_m": 567.288382,
-      "p7d": -1.808636928114542,
-      "ath_chg": -92.01393,
-      "volume": 20977273
-    },
-    {
-      "symbol": "BERA",
-      "score": 63.4,
-      "breakdown": {
-        "ath_discount": 25,
-        "vol_momentum": 18.4,
-        "price_7d": 0.1,
-        "fg_contrarian": 12.6,
-        "github": 0.2,
-        "mcap_upside": 7
-      },
-      "price": 0.414928,
-      "mcap_m": 101.363805,
-      "p7d": 0.29209250593700736,
-      "ath_chg": -97.20443,
-      "volume": 23293915
-    },
-    {
-      "symbol": "SUI",
-      "score": 61.1,
-      "breakdown": {
-        "ath_discount": 22.9,
-        "vol_momentum": 7.7,
-        "price_7d": 3.5,
-        "fg_contrarian": 12.6,
-        "github": 13.4,
-        "mcap_upside": 1
-      },
-      "price": 0.93306,
-      "mcap_m": 3689.389873,
-      "p7d": 7.041701505741732,
-      "ath_chg": -82.54844,
-      "volume": 355515236
+      "price": 0.253589,
+      "mcap_m": 1234.80844,
+      "p7d": -1.7761535147109333,
+      "ath_chg": -88.15092,
+      "volume": 60644417
     },
     {
       "symbol": "VIRTUAL",
-      "score": 59.7,
+      "score": 61.2,
       "breakdown": {
         "ath_discount": 24.1,
-        "vol_momentum": 8.9,
-        "price_7d": 2.1,
-        "fg_contrarian": 12.6,
+        "vol_momentum": 9.7,
+        "price_7d": 2.6,
+        "fg_contrarian": 12.8,
         "github": 5.0,
         "mcap_upside": 7
       },
-      "price": 0.673334,
-      "mcap_m": 441.807055,
-      "p7d": 4.22953811749747,
-      "ath_chg": -86.74185,
-      "volume": 49033340
+      "price": 0.670198,
+      "mcap_m": 439.746529,
+      "p7d": 5.285974320290265,
+      "ath_chg": -86.76912,
+      "volume": 53165022
+    },
+    {
+      "symbol": "SUI",
+      "score": 60.2,
+      "breakdown": {
+        "ath_discount": 22.9,
+        "vol_momentum": 6.7,
+        "price_7d": 3.5,
+        "fg_contrarian": 12.8,
+        "github": 13.4,
+        "mcap_upside": 1
+      },
+      "price": 0.933179,
+      "mcap_m": 3688.999899,
+      "p7d": 7.029026886814709,
+      "ath_chg": -82.5462,
+      "volume": 308855540
+    },
+    {
+      "symbol": "BERA",
+      "score": 59.1,
+      "breakdown": {
+        "ath_discount": 25,
+        "vol_momentum": 13.2,
+        "price_7d": 0.9,
+        "fg_contrarian": 12.8,
+        "github": 0.2,
+        "mcap_upside": 7
+      },
+      "price": 0.417037,
+      "mcap_m": 101.966062,
+      "p7d": 1.883975327284864,
+      "ath_chg": -97.18998,
+      "volume": 16796184
+    },
+    {
+      "symbol": "PENDLE",
+      "score": 54.9,
+      "breakdown": {
+        "ath_discount": 23.8,
+        "vol_momentum": 10.3,
+        "price_7d": 0.9,
+        "fg_contrarian": 12.8,
+        "github": 0.1,
+        "mcap_upside": 7
+      },
+      "price": 1.08,
+      "mcap_m": 180.048925,
+      "p7d": 1.8084649086754299,
+      "ath_chg": -85.62344,
+      "volume": 23206221
+    },
+    {
+      "symbol": "JUP",
+      "score": 50.1,
+      "breakdown": {
+        "ath_discount": 25,
+        "vol_momentum": 3.2,
+        "price_7d": 0.2,
+        "fg_contrarian": 12.8,
+        "github": 5.0,
+        "mcap_upside": 4
+      },
+      "price": 0.162578,
+      "mcap_m": 577.233707,
+      "p7d": 0.45857073898789663,
+      "ath_chg": -91.86986,
+      "volume": 22740872
     },
     {
       "symbol": "HYPE",
-      "score": 31.8,
+      "score": 33.2,
       "breakdown": {
-        "ath_discount": 8.9,
-        "vol_momentum": 2.5,
-        "price_7d": 6.5,
-        "fg_contrarian": 12.6,
+        "ath_discount": 8.1,
+        "vol_momentum": 2.4,
+        "price_7d": 8.6,
+        "fg_contrarian": 12.8,
         "github": 0.3,
         "mcap_upside": 1
       },
-      "price": 40.31,
-      "mcap_m": 9604.647518,
-      "p7d": 12.937254887087246,
-      "ath_chg": -32.03273,
-      "volume": 304958218
+      "price": 42.02,
+      "mcap_m": 10018.98984,
+      "p7d": 17.26642289627148,
+      "ath_chg": -29.13635,
+      "volume": 301424136
     }
   ]
 }
